@@ -1,4 +1,4 @@
-body{
+        body{
             background-color: rgb(25,25,25);
             color: white;
             font-family: Arial;
@@ -23,7 +23,7 @@ body{
         .class{
             margin-top: 50px;
         }
-        .reset-score{
+        .reset-score,.auto-play-button{
             padding: 8px 15px;
             border: none;
             font-size: 15px;
