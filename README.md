@@ -32,3 +32,7 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. The pla
 ## Screenshot
 
 ![Rock Paper Scissors](rock-paper-scissors-image.png)
+
+## Demo
+
+![Demo](rock-paper-scissors-gif.gif)
