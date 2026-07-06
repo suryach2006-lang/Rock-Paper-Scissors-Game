@@ -11,6 +11,7 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. The pla
 * Displays game result after every round
 * Score tracking
 * Responsive and user-friendly interface
+* Auto Play feature
 
 ## Technologies Used
 
