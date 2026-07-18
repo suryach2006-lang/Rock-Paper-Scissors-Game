@@ -11,7 +11,9 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. The pla
 * Displays game result after every round
 * Score tracking
 * Responsive and user-friendly interface
-* Auto Play feature
+* Auto Play mode with start/stop toggle
+* Reset confirmation dialog (Yes/No)
+* Event-driven controls using `addEventListener()`
 
 ## Keyboard Shortcuts
 
@@ -20,6 +22,8 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. The pla
 | `R` | Play Rock |
 | `P` | Play Paper |
 | `S` | Play Scissors |
+| `A` | Toggle Auto Play |
+| `Backspace` | Reset Score |
 
 ## Technologies Used
 

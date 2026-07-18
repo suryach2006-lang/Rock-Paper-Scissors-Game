@@ -16,12 +16,16 @@
 
                 let reset = document.querySelector('.js-reset-button');
                 reset.addEventListener('click',()=>{
+                   showResetConfirmation();
+                });
+
+                function resetScore(){
                     score.wins=0;
                     score.losses=0;
                     score.ties=0; 
                     localStorage.removeItem('score'); 
                     updateScoreElement();
-                });
+                }
 
                 function autoPlay(){
                     if(!isAutoPlaying){
@@ -49,11 +53,7 @@
                     } else if(event.key==='a'){
                         autoPlay();
                     } else if(event.key==='Backspace'){
-                        score.wins=0;
-                        score.losses=0;
-                        score.ties=0;
-                        localStorage.removeItem('score'); 
-                        updateScoreElement();
+                        showResetConfirmation();
                     }
                 });
             
@@ -111,6 +111,35 @@
 
                     
                 }
+
+
+                function showResetConfirmation(){
+                    document.querySelector('.confirm')
+                    .innerHTML=`
+                      Are you sure you want to reset the score?
+                      <button class="reset-confirm-yes reset-confirm">Yes</button>
+                    <button class="reset-confirm-no reset-confirm">
+                    No</button>
+                      `;
+
+                       document.querySelector('.reset-confirm-yes')
+                .addEventListener('click',()=>{
+                    resetScore();
+                    hideResetConfirmation();
+                });
+
+                document.querySelector('.reset-confirm-no')
+                .addEventListener('click',()=>{
+                    hideResetConfirmation();
+                });
+                }
+
+                function hideResetConfirmation(){
+                    document.querySelector('.confirm')
+                    .innerHTML=``;
+                }
+
+               
                
                 function updateScoreElement(){
                      document.querySelector('.js-score').innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;

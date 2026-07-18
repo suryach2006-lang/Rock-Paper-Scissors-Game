@@ -23,13 +23,18 @@
         .class{
             margin-top: 50px;
         }
-        .reset-score,.auto-play-button{
+        .reset-score,.auto-play-button,.reset-confirm{
             padding: 8px 15px;
             border: none;
             font-size: 15px;
             background-color: white;
             cursor: pointer;
         }
+
+        .confirm{
+            margin-left: 10px;
+        }
+        
         .para{
             font-size: 30px;
             font-weight: bold;
