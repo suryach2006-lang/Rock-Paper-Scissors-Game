@@ -13,6 +13,14 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript. The pla
 * Responsive and user-friendly interface
 * Auto Play feature
 
+## Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| `R` | Play Rock |
+| `P` | Play Paper |
+| `S` | Play Scissors |
+
 ## Technologies Used
 
 * HTML
