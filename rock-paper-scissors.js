@@ -9,16 +9,32 @@
                 let isAutoPlaying = false;
                 let intervalId;
 
+                let autoplay = document.querySelector('.js-auto-play-button');
+                autoplay.addEventListener('click',()=>{
+                    autoPlay();
+                });
+
+                let reset = document.querySelector('.js-reset-button');
+                reset.addEventListener('click',()=>{
+                    score.wins=0;
+                    score.losses=0;
+                    score.ties=0; 
+                    localStorage.removeItem('score'); 
+                    updateScoreElement();
+                });
+
                 function autoPlay(){
                     if(!isAutoPlaying){
                         intervalId = setInterval(function(){
                             const playerMove=pickComputerMove();
                             playGame(playerMove);
                         },1000);
+                        autoplay.innerHTML='Stop Playing';
                         isAutoPlaying = true;
                     }
                     else{
                         clearInterval(intervalId);
+                        autoplay.innerHTML='Auto Play';
                         isAutoPlaying = false;
                     }
                 }
@@ -30,6 +46,14 @@
                         playGame('Paper');
                     } else if(event.key==='s'){
                         playGame('Scissors');
+                    } else if(event.key==='a'){
+                        autoPlay();
+                    } else if(event.key==='Backspace'){
+                        score.wins=0;
+                        score.losses=0;
+                        score.ties=0;
+                        localStorage.removeItem('score'); 
+                        updateScoreElement();
                     }
                 });
             
